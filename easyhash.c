@@ -28,6 +28,7 @@ uint64_t hash_16_multi(const uint8_t* data, size_t len) {
     return hash;
 }
 
+// Mixed-bit primes
 uint64_t hash_mixed_primes(const uint8_t* data, size_t len) {
     uint64_t hash = len;
     const uint64_t* ptr = (const uint64_t*)data;
@@ -54,6 +55,21 @@ uint64_t hash_32(const uint8_t* data, size_t len) {
     return hash;
 }
 
+// 24-bit and small primes
+uint64_t hash_24_and_small(const uint8_t* data, size_t len) {
+    uint64_t hash = len;
+    const uint64_t* ptr = (const uint64_t*)data;
+    
+    for (size_t i = 0; i < len/8; i++) {
+        hash ^= ptr[i];
+        hash *= 16777213;  // 24-bit prime
+        hash *= 4093;      // 12-bit prime
+        hash *= 251;       // 8-bit prime
+        hash *= 13;        // 4-bit prime
+    }
+    return hash;
+}
+
 
 int main() {
     // Test data - similar strings that should produce different hashes
@@ -62,29 +78,38 @@ int main() {
         "test1235",
         "test1334",
         "TEST1234",
-        "1234test"
+        "1234test",
+        "1235test",
+        "1334test",
+        "1234TEST"
     };
     
     printf("Single 16-bit prime:\n");
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 8; i++) {
         uint64_t h = hash_16((uint8_t*)tests[i], strlen(tests[i]));
         printf("%s -> %016llu\n", tests[i], h);
     }
     
     printf("\nMultiple 16-bit primes:\n");
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 8; i++) {
         uint64_t h = hash_16_multi((uint8_t*)tests[i], strlen(tests[i]));
         printf("%s -> %016llu\n", tests[i], h);
     }
     
     printf("\nMixed-bit primes:\n");
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 8; i++) {
         uint64_t h = hash_mixed_primes((uint8_t*)tests[i], strlen(tests[i]));
+        printf("%s -> %016llu\n", tests[i], h);
+    }
+            
+    printf("\n24-bit and small primes::\n");
+    for (int i = 0; i < 8; i++) {
+        uint64_t h = hash_24_and_small((uint8_t*)tests[i], strlen(tests[i]));
         printf("%s -> %016llu\n", tests[i], h);
     }
         
     printf("\n32-bit prime:\n");
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 8; i++) {
         uint64_t h = hash_32((uint8_t*)tests[i], strlen(tests[i]));
         printf("%s -> %016llu\n", tests[i], h);
     }
