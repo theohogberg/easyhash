@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
+#include "testgen.h"
+
 
 // Single 16-bit prime
 uint64_t hash_16(const uint8_t* data, size_t len) {
@@ -72,47 +74,13 @@ uint64_t hash_24_and_small(const uint8_t* data, size_t len) {
 
 
 int main() {
-    // Test data - similar strings that should produce different hashes
-    const char* tests[] = {
-        "test1234",
-        "test1235",
-        "test1334",
-        "TEST1234",
-        "1234test",
-        "1235test",
-        "1334test",
-        "1234TEST"
-    };
-    
-    printf("Single 16-bit prime:\n");
-    for (int i = 0; i < 8; i++) {
-        uint64_t h = hash_16((uint8_t*)tests[i], strlen(tests[i]));
-        printf("%s -> %016llu\n", tests[i], h);
-    }
-    
-    printf("\nMultiple 16-bit primes:\n");
-    for (int i = 0; i < 8; i++) {
-        uint64_t h = hash_16_multi((uint8_t*)tests[i], strlen(tests[i]));
-        printf("%s -> %016llu\n", tests[i], h);
-    }
-    
-    printf("\nMixed-bit primes:\n");
-    for (int i = 0; i < 8; i++) {
-        uint64_t h = hash_mixed_primes((uint8_t*)tests[i], strlen(tests[i]));
-        printf("%s -> %016llu\n", tests[i], h);
-    }
-            
-    printf("\n24-bit and small primes::\n");
-    for (int i = 0; i < 8; i++) {
-        uint64_t h = hash_24_and_small((uint8_t*)tests[i], strlen(tests[i]));
-        printf("%s -> %016llu\n", tests[i], h);
-    }
-        
-    printf("\n32-bit prime:\n");
-    for (int i = 0; i < 8; i++) {
-        uint64_t h = hash_32((uint8_t*)tests[i], strlen(tests[i]));
-        printf("%s -> %016llu\n", tests[i], h);
-    }
-    
-    return 0;
+   srand(time(NULL));
+
+   run_collision_tests(hash_16, "Single 16-bit prime");
+   run_collision_tests(hash_16_multi, "Multiple 16-bit primes");
+   run_collision_tests(hash_mixed_primes, "Mixed-bit primes");
+   run_collision_tests(hash_24_and_small, "24-bit and small primes");
+   run_collision_tests(hash_32, "32-bit prime");
+
+   return 0;
 }
