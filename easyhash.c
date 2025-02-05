@@ -4,15 +4,23 @@
 #include "testgen.h"
 
 
+// note: why only iterate 8-bytes?
 // Single 16-bit prime
 uint64_t hash_16(const uint8_t* data, size_t len) {
     uint64_t hash = len;
     const uint64_t* ptr = (const uint64_t*)data;
-    
-    for (size_t i = 0; i < len/8; i++) {
+    const uint32_t byte_max = len*8; //max bytes
+    size_t i = 0;
+    for (;byte_max > i*64; i++) {
         hash ^= ptr[i];
         hash *= 65521;  // Largest 16-bit prime
     }
+    uint32_t bits_l = i*64-byte_max;
+    if (bits_l>0) //bits left
+    {
+        hash ^= ptr[i+1];
+    }
+
     return hash;
 }
 
