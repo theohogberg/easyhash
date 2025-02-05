@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "testgen.h"
+#include "apple_time_test.h"
 
 
 // note: why only iterate 8-bytes?
@@ -9,16 +10,16 @@
 uint64_t hash_16(const uint8_t* data, size_t len) {
     uint64_t hash = len;
     const uint64_t* ptr = (const uint64_t*)data;
-    const uint32_t byte_max = len*8; //max bytes
+    const uint64_t bits_max = len*8; //max bits
     size_t i = 0;
-    for (;byte_max > i*64; i++) {
+    for (;bits_max > i*64; i++) {
         hash ^= ptr[i];
         hash *= 65521;  // Largest 16-bit prime
     }
-    uint32_t bits_l = i*64-byte_max;
-    if (bits_l>0) //bits left
+    uint32_t bits_left = i*64-bits_max;
+    if (bits_left>0) //bits left
     {
-        hash ^= ptr[i+1];
+        hash ^= (ptr[i+1]>>bits_left);
     }
 
     return hash;
@@ -225,6 +226,14 @@ int main() {
     run_collision_tests(xxhash_32_one, "xxh3 32-bit one prime");
     run_collision_tests(xxhash_32_two, "xxh3 32-bit two prime");
 
+    // Enable performance counters (might need root/admin privileges)
+    //asm __volatile__("msr PMCNTENSET_EL0, %0" : : "r" (1UL));
+
+    // char** rxrs = allocate_random_strings(10,10);
+    // for(int q=0;q<10;q++)
+    //    printf("%s\n", rxrs[q]);
+
+    run_performance_tests(hash_16, "hash_16");
 
     run_performance_tests(xxhash_32_one, "xxhash_32_one");
     run_performance_tests(xxhash_32_two, "xxhash_32_two");
