@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
-#include "testgen.h"
-#include "apple_time_test.h"
+#include "pattern_tester.h"
+#include "performance_tester.h"
 
 
 // note: why only iterate 8-bytes?

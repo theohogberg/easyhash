@@ -1,4 +1,4 @@
-// testgen.h
+// pattern-tester.h
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
