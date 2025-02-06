@@ -182,6 +182,24 @@ uint64_t hash_16_opt_combo_mega(const uint8_t* data, size_t len) {
     return hash;
 }
 
+// Alternating 8-bit test
+uint64_t hash_micro_prime(const uint8_t* data, size_t len) {
+    uint64_t hash = len;
+    const uint64_t* ptr = (const uint64_t*)data;
+
+    for (size_t i = 0; i < len/8; i++) {
+        hash ^= ptr[i];
+        hash *= 43691;      // 16-bit prime (1010101010101011)
+        hash *= 251;        // 8-bit prime (11111011)
+        hash *= 109;        // 8-bit prime (01101101)
+        hash *= 233;        // 8-bit prime (11101001)
+        hash *= 197;        // 8-bit prime (11000101)
+        hash *= 11;         // 4-bit prime ()
+        hash *= 7;          // 4-bit prime ()
+        hash *= 3;          // 4-bit prime ()
+    }
+    return hash;
+}
 
 // xxh3 32-bit one prime style
 uint64_t xxhash_32_one(const uint8_t* data, size_t len) {
@@ -234,6 +252,19 @@ int main() {
     //    printf("%s\n", rxrs[q]);
 
     run_performance_tests(hash_16, "hash_16");
+    run_performance_tests(hash_16_multi, "hash_16_multi");
+    run_performance_tests(hash_16_multi_improved, "hash_16_multi_improved");
+
+    run_performance_tests(hash_mixed_primes, "hash_mixed_primes");
+    run_performance_tests(hash_24_and_small, "hash_24_and_small");
+    run_performance_tests(hash_20_alternating, "hash_20_alternating");
+    run_performance_tests(hash_16_and_8_alternating, "hash_16_and_8_alternating");
+    run_performance_tests(hash_16_and_8_improved, "hash_16_and_8_improved");
+    run_performance_tests(hash_16_and_8_improved_opt, "hash_16_and_8_improved_opt");
+    run_performance_tests(hash_16_and_8_improved_opt_combo, "hash_16_and_8_improved_opt_combo");
+    run_performance_tests(hash_16_opt_combo_mega,  "hash_16_opt_combo_mega");
+
+    run_performance_tests(hash_micro_prime,  "hash_micro_prime");
 
     run_performance_tests(xxhash_32_one, "xxhash_32_one");
     run_performance_tests(xxhash_32_two, "xxhash_32_two");
