@@ -2,56 +2,56 @@
 Testing Single 16-bit prime:
 
 Similar prefix tests:
-test365627 -> 0915476f92bb0d9e
-test607513 -> 11faa14292bb0d9e
-test434738 -> f725746092bb0d9e
-test309248 -> 3ed9a16f92bb0d9e
-test933059 -> 6039741592bb0d9e
+test793802 -> 24f909b5a6b544ce
+test483905 -> 245226129fb5adce
+test227379 -> 960cde509bb0ea19
+test023997 -> d8c4dc8ea1ae9037
+test039865 -> df0bbd8e9fafae28
 
 Similar suffix tests:
-073465test -> 436716062839c39a
-605469test -> 4766da08211e2c7c
-667365test -> 4367150a35ffd27c
-479360test -> 3e67600c36e3c35e
-619927test -> 4562fd47d6e21d7c
+762703test -> 62acbbbafbaf443e
+999172test -> 79e19700bbbbab70
+365581test -> 9bbe3c633d4a393a
+471384test -> 3fbd1cde78cd445d
+804603test -> 61aed3742a4ec351
 
 Repeating pattern tests:
 azby0918 -> ee4e1f8b5da3d3d9
-azby0918az -> ee4e1f8b5da5d3bb
-azby0918azby -> ee4e1f8b5da7d39d
-azby0918azby09 -> ee4e1f8b5da9d37f
+azby0918az -> 28f7847b2d250c3a
+azby0918azby -> 28f74b9e82670a3c
+azby0918azby09 -> 3026dfd4812f173e
 azby0918azby0918 -> 9547dfd2812f1900
 
 Single character difference tests:
-test1234test -> 2331838d92b50df8
-uest1234test -> 2331838d92b60de9
-tfst1234test -> 2331838d93b4fef8
-tett1234test -> 2331838e92a60df8
-tesu1234test -> 2331848d83b50df8
-test2234test -> 2332837e92b50df8
-test1334test -> 2431748d92b50df8
-test1244test -> 2322838d92b50df8
-test1235test -> 1431838d92b50df8
-test1234uest -> 2331838d92b50df8
-test1234tfst -> 2331838d92b50df8
-test1234tett -> 2331838d92b50df8
-test1234tesu -> 2331838d92b50df8
+test1234test -> 699ad7758499babc
+uest1234test -> 73a73174e30bdecd
+tfst1234test -> 73a7327706d9e2cc
+tett1234test -> 73a83175e20adfcc
+tesu1234test -> 74a73374e3ebdfcc
+test2234test -> 73893256e2ebdfcc
+test1334test -> 55a81275e2ebdfcc
+test1244test -> 74883175e2ebdfcc
+test1235test -> 54a73175e2ebdfcc
+test1234uest -> 73a73175e2ecdfbd
+test1234tfst -> 73a73175e5ebb2cc
+test1234tett -> 73a73170e336dfcc
+test1234tesu -> 73a73275d3ebdfcc
 
 Testing Multiple 16-bit primes:
 
 Similar prefix tests:
-test697389 -> 63e4f71d07e04432
-test407104 -> 3484e5cf07e04432
-test890513 -> cd91a96b07e04432
-test198641 -> 94b1b95a07e04432
-test650120 -> aa6f5b1d07e04432
+test269413 -> 892c1d8107e04432
+test788381 -> 6411a94407e04432
+test535436 -> 99a133f607e04432
+test595491 -> d2b81df607e04432
+test755418 -> 6311344407e04432
 
 Similar suffix tests:
-891188test -> 6697f431cb57189e
-699079test -> 845e8f62a8439424
-480339test -> 9975d8e8a7c91f72
-673852test -> 288a2d990ba74624
-651042test -> 590adfdf63a6f824
+835226test -> 37982f791ddc2e9e
+678417test -> 85d22df2ad6a4624
+187877test -> 8e6873af493d93fd
+449155test -> b145824280c38372
+582982test -> f4764a3949f5f899
 
 Repeating pattern tests:
 azby0918 -> a37b09f22bd1a6ff
@@ -75,21 +75,59 @@ test1234tfst -> f0f8aa03e4a72d48
 test1234tett -> f0f8aa03e4a72d48
 test1234tesu -> f0f8aa03e4a72d48
 
+Testing Improved multiple 16-bit primes:
+
+Similar prefix tests:
+test074858 -> a656d6a4747b8c4f
+test306225 -> 9785bb56d12aa963
+test227152 -> 31012ea63a52de03
+test110187 -> 5cc10afbd6fb0c59
+test600956 -> 3a6cb2a1a597ad0f
+
+Similar suffix tests:
+285943test -> 7c4c948c6aaecd05
+905636test -> 62deae33c9f70f96
+308404test -> 1deab87251f706e3
+646438test -> ac4fc2925ae34431
+400937test -> e6a18aa60e9d7fce
+
+Repeating pattern tests:
+azby0918 -> f9ba9b3e7724fd0d
+azby0918az -> f9b89b8c611e5893
+azby0918azby -> f9b69be2626bf629
+azby0918azby09 -> f9b49b309a6f5e3f
+azby0918azby0918 -> 2822af97e2be9667
+
+Single character difference tests:
+test1234test -> 0fc41536942db6cb
+uest1234test -> 0fc114efb012d3e4
+tfst1234test -> 0ebf3d09911dcf2b
+tett1234test -> 0f971542b64eaac2
+tesu1234test -> c6c4000882df428f
+test2234test -> 159de3448459a152
+test1334test -> f398ff1ce5cfdfd0
+test1244test -> e8f7b1ab7a05b46b
+test1235test -> 0bc74dbe26f73da8
+test1234uest -> 0fc41536942db6cb
+test1234tfst -> 0fc41536942db6cb
+test1234tett -> 0fc41536942db6cb
+test1234tesu -> 0fc41536942db6cb
+
 Testing Mixed-bit primes:
 
 Similar prefix tests:
-test392654 -> 339517856e766d5a
-test818891 -> 8eb563646e766d5a
-test174850 -> 94bb965f6e766d5a
-test563405 -> 4043b9ab6e766d5a
-test801062 -> e582d0646e766d5a
+test572975 -> c3de4cab6e766d5a
+test653048 -> dfe8543e6e766d5a
+test555421 -> c93c26ab6e766d5a
+test924586 -> af6923f76e766d5a
+test251397 -> 46799df26e766d5a
 
 Similar suffix tests:
-399751test -> 202b88a6caace0bb
-641021test -> 4e2259cb77a78a74
-900779test -> 260ba0f659faa449
-542716test -> 3e308aace3b1132d
-288350test -> 1e3a2294c11a2028
+375021test -> 5153b1ea6b05babb
+871558test -> 418f5dac62fa7bb6
+567941test -> f83b255791eb392d
+612044test -> 4118c88a2eb1d174
+597539test -> 9ce0aa47bc73f22d
 
 Repeating pattern tests:
 azby0918 -> dfc9b496f232bf4b
@@ -116,18 +154,18 @@ test1234tesu -> 0044b298fb895be8
 Testing 24-bit and small primes:
 
 Similar prefix tests:
-test064291 -> 3a9082b29d7f4912
-test022307 -> 3997a6b29d7f4912
-test484487 -> e4487b8e9d7f4912
-test175678 -> 1686dc699d7f4912
-test433697 -> a063e88e9d7f4912
+test055632 -> 1ca4cbb29d7f4912
+test689148 -> 6e14c0fc9d7f4912
+test871931 -> f4f34f6a9d7f4912
+test149590 -> 147ab7699d7f4912
+test934075 -> bc2a16219d7f4912
 
 Similar suffix tests:
-303132test -> 425ab6d7b2d78abf
-972007test -> 7fb5c1fd1de7bb75
-749966test -> 0ead39e7b01ef19b
-841117test -> 3be517ae9babf3be
-579441test -> 8fe8472174405c09
+750647test -> a388d9d06f52a89b
+840062test -> 5a3c550241f4f3be
+474185test -> acb2493c6110b952
+899933test -> fae15bda789186be
+773256test -> 05752853b4bd169b
 
 Repeating pattern tests:
 azby0918 -> eb57c1b96ed7f30f
@@ -151,21 +189,287 @@ test1234tfst -> 53e682af19d378c8
 test1234tett -> 53e682af19d378c8
 test1234tesu -> 53e682af19d378c8
 
-Testing 32-bit prime:
+Testing Alternating 20-bit and small primes:
 
 Similar prefix tests:
-test770904 -> 6b38a0d0a0d3ba1e
-test711552 -> d40f7ad0a0d3ba1e
-test332463 -> 92d5f60ca0d3ba1e
-test021391 -> 5604d7f9a0d3ba1e
-test995958 -> 770ff632a0d3ba1e
+test340604 -> 7633027ae1747ec6
+test056853 -> 8ef24e63e1747ec6
+test768671 -> 91fa7deee1747ec6
+test849731 -> 9656744be1747ec6
+test023718 -> 01ca3763e1747ec6
 
 Similar suffix tests:
-580164test -> bc060acac475aa8f
-165002test -> 972aad018c1961cb
-457943test -> 4d1373df5ba81dde
-031833test -> ae3a0c28e8b0d51a
-068801test -> 64a49274e2f4e81a
+937480test -> a73d2d132d2da987
+405700test -> d11997419a7f2686
+567806test -> b54358984cbb04e3
+573430test -> 0ce6842576f761e3
+487595test -> dcd24e983ebc0e86
+
+Repeating pattern tests:
+azby0918 -> 92fd7c41dfe5a825
+azby0918az -> 92fd81834ca508df
+azby0918azby -> 92fd86c4b9646999
+azby0918azby09 -> 92fd8c062623ca53
+azby0918azby0918 -> b98fb5d97508d43c
+
+Single character difference tests:
+test1234test -> a129d7fc9b365c98
+uest1234test -> a129da9d51960cf5
+tfst1234test -> a12c78b2fae6b998
+tett1234test -> a3ca8e5c4b935c98
+tesu1234test -> 41e037acf8365c98
+test2234test -> 578988599b365c98
+test1334test -> 00da34fc9b365c98
+test1244test -> 5186d7fc9b365c98
+test1235test -> fe29d7fc9b365c98
+test1234uest -> a129d7fc9b365c98
+test1234tfst -> a129d7fc9b365c98
+test1234tett -> a129d7fc9b365c98
+test1234tesu -> a129d7fc9b365c98
+
+Testing Alternating 16-bit and 8-bit primes:
+
+Similar prefix tests:
+test327397 -> eed5e23f6a3d798a
+test795333 -> 5e25d52b6a3d798a
+test858960 -> 2fc0cea66a3d798a
+test423370 -> 97a9c7ba6a3d798a
+test010300 -> 2c53b6ce6a3d798a
+
+Similar suffix tests:
+383604test -> a468935b9c6e0063
+092492test -> 4a33164bbf9860de
+910930test -> 64670d0ea5374281
+030198test -> 9297c3a304417ede
+690164test -> d830187d01222bd4
+
+Repeating pattern tests:
+azby0918 -> ffb1468f2c27bd73
+azby0918az -> ffb1c061a9a78869
+azby0918azby -> ffb23a342727535f
+azby0918azby09 -> ffb2b406a4a71e55
+azby0918azby0918 -> 7a5247cb29ed472e
+
+Single character difference tests:
+test1234test -> 5668a9d1f1be18a8
+uest1234test -> 5668e6bb307dfe23
+tfst1234test -> 56a59310b1a393a8
+tett1234test -> 9351e891d73918a8
+tesu1234test -> 3fa769b76cbe18a8
+test2234test -> 95288f4cf1be18a8
+test1334test -> 164e24d1f1be18a8
+test1244test -> 3be3a9d1f1be18a8
+test1235test -> d168a9d1f1be18a8
+test1234uest -> 5668a9d1f1be18a8
+test1234tfst -> 5668a9d1f1be18a8
+test1234tett -> 5668a9d1f1be18a8
+test1234tesu -> 5668a9d1f1be18a8
+
+Testing Improved 16-bit and 8-bit primes:
+
+Similar prefix tests:
+test486140 -> 4408b4c4997d805d
+test810311 -> ffd439af9c61693b
+test508493 -> 2a53c01f8a773426
+test052387 -> 57b515a097a73df3
+test804571 -> cbd4c628e8e72ecc
+
+Similar suffix tests:
+060335test -> 9310151c63eff5c2
+023271test -> c1c4d28f34b1fc5a
+009717test -> e414126686d3d664
+451782test -> 1921edb86d63e44c
+545301test -> b369f7de2202f361
+
+Repeating pattern tests:
+azby0918 -> d845f50615d65d13
+azby0918az -> d8451e89ed0f6a3d
+azby0918azby -> d8430e93ce7b653b
+azby0918azby09 -> d8423ab822af942e
+azby0918azby0918 -> fb37694294071a8a
+
+Single character difference tests:
+test1234test -> 1fcae08844b67c2a
+uest1234test -> 1fd1f5da823b4fdb
+tfst1234test -> 1f54fc66841df500
+tett1234test -> 254b9e59c1813dcb
+tesu1234test -> d19d719ea956b06a
+test2234test -> 15386586d8dddd1a
+test1334test -> e15d5682daa7c6c6
+test1244test -> e617a6b54c14e659
+test1235test -> 7c1dc8523dd8dbf9
+test1234uest -> 1fcae08844b67c2a
+test1234tfst -> 1fcae08844b67c2a
+test1234tett -> 1fcae08844b67c2a
+test1234tesu -> 1fcae08844b67c2a
+
+Testing Improved 16-bit and 8-bit primes optimized:
+
+Similar prefix tests:
+test945939 -> 10d12f4f752f9d11
+test664082 -> 43cbb99279741f1e
+test060729 -> 5ecb2f402f490907
+test811611 -> c8b8049455910b47
+test811500 -> 4545cfc450899c47
+
+Similar suffix tests:
+837013test -> b7e9643dce1a8434
+437751test -> 3d24f7872826e1c0
+266541test -> 4027618e5ff3c283
+713486test -> a3b211161cf8cc3c
+150653test -> f1b4687ff2231266
+
+Repeating pattern tests:
+azby0918 -> bd604e588326a724
+azby0918az -> bd604e050920aee9
+azby0918azby -> bd604bb7953f8c8c
+azby0918azby09 -> bd604aff271808d7
+azby0918azby0918 -> cc6628077ef4437e
+
+Single character difference tests:
+test1234test -> 5bb845b4a94af05e
+uest1234test -> 5bb82399a5541849
+tfst1234test -> 5bb77c032d7cfae3
+tett1234test -> 5c510fc7b108ae9b
+tesu1234test -> b83a3a794e0d1efe
+test2234test -> a093e36159dccb7c
+test1334test -> e58388df957e6fc3
+test1244test -> d3200f7bf95ba2c3
+test1235test -> de9c28d058a7f35e
+test1234uest -> 5bb845b4a94af05e
+test1234tfst -> 5bb845b4a94af05e
+test1234tett -> 5bb845b4a94af05e
+test1234tesu -> 5bb845b4a94af05e
+
+Testing Improved 16-bit and 8-bit primes optimized combo:
+
+Similar prefix tests:
+test101957 -> 6327e2ec9d3578e8
+test685479 -> c5376ef3c7963fe8
+test666670 -> 643ac7836c6f03e3
+test410814 -> 6085fa9c16beafec
+test884579 -> e3cd3ea96970e670
+
+Similar suffix tests:
+845889test -> 7c4a1d579d7de81b
+470406test -> ab9a44e46240316e
+538512test -> 8a77ae8f48670187
+467550test -> 5a163cc7b6de5945
+520779test -> df4cd3ba54a6bf67
+
+Repeating pattern tests:
+azby0918 -> d915ea9c2769a098
+azby0918az -> d915eaf3d883b36e
+azby0918azby -> d915ec4493001a3a
+azby0918azby09 -> d915ecaf12e7110d
+azby0918azby0918 -> 3aae59a67f7a9eb9
+
+Single character difference tests:
+test1234test -> e03c0d3a56873eca
+uest1234test -> e03c0c46f164d7cc
+tfst1234test -> e034cdcd6e014a0a
+tett1234test -> e0f512a167446a97
+tesu1234test -> 2c8b1f4d997f74c9
+test2234test -> 5e693eafe416305c
+test1334test -> 15e84c5809f6bac2
+test1244test -> 5ae57b010283322f
+test1235test -> a179e9ac313697ca
+test1234uest -> e03c0d3a56873eca
+test1234tfst -> e03c0d3a56873eca
+test1234tett -> e03c0d3a56873eca
+test1234tesu -> e03c0d3a56873eca
+
+Testing 16-bit primes opt-combo megahack:
+
+Similar prefix tests:
+test753994 -> 1b1e8f9fb2cdfcc7
+test915983 -> 754dc2e50255ce9b
+test090768 -> d41efd4cb86fe27b
+test386196 -> 90cd4c65ef49f7cf
+test789755 -> 852e29a156653f92
+
+Similar suffix tests:
+249447test -> cd1dd69d3dc48e14
+955615test -> 35701372e97ee53f
+913889test -> 542b010f52e09536
+439517test -> 3a2eefe8e063f875
+451460test -> 3dac16580eedd0f6
+
+Repeating pattern tests:
+azby0918 -> 05803c483988e353
+azby0918az -> 05803c4af7c3f948
+azby0918azby -> 05803c4bfb8ea0a1
+azby0918azby09 -> 05803c4b6feb4a85
+azby0918azby0918 -> 1bb358053c042e21
+
+Single character difference tests:
+test1234test -> a75dec1228dc9afc
+uest1234test -> a75dec119786dd0d
+tfst1234test -> a75ded008dbb6758
+tett1234test -> a75d35bf049a43b7
+tesu1234test -> a64dda69950843ea
+test2234test -> 60f508ffac51ac24
+test1334test -> c29daa24f4672336
+test1244test -> 0bc7b3f153096145
+test1235test -> 960c85bdcce543fc
+test1234uest -> a75dec1228dc9afc
+test1234tfst -> a75dec1228dc9afc
+test1234tett -> a75dec1228dc9afc
+test1234tesu -> a75dec1228dc9afc
+
+Testing 8-bit micro primes:
+
+Similar prefix tests:
+test322147 -> 31b6e5bcfcf52f12
+test709572 -> 9cee3698fcf52f12
+test976829 -> 5ee21706fcf52f12
+test983712 -> 5e2cce06fcf52f12
+test617650 -> 16ea7de1fcf52f12
+
+Similar suffix tests:
+451237test -> 0609b69f3b78f152
+241826test -> 0fd13f832de89c08
+039496test -> bce91918903bc476
+513269test -> 94942b88682d8509
+003953test -> c8bd2e2174a29f76
+
+Repeating pattern tests:
+azby0918 -> 4d3837d87786080f
+azby0918az -> 4d9246633d90e77d
+azby0918azby -> 4dec54ee039bc6eb
+azby0918azby09 -> 4e466378c9a6a659
+azby0918azby0918 -> 953f89ea8da2b9aa
+
+Single character difference tests:
+test1234test -> ff54daaeaad490c8
+uest1234test -> ff81e1f40dda007f
+tfst1234test -> 2c5c2011b04447c8
+tett1234test -> 069a3db41a8b90c8
+tesu1234test -> 44b7e01e61d490c8
+test2234test -> 625a4a65aad490c8
+test1334test -> 04c491aeaad490c8
+test1244test -> 6f0bdaaeaad490c8
+test1235test -> b654daaeaad490c8
+test1234uest -> ff54daaeaad490c8
+test1234tfst -> ff54daaeaad490c8
+test1234tett -> ff54daaeaad490c8
+test1234tesu -> ff54daaeaad490c8
+
+Testing xxh3 32-bit one prime:
+
+Similar prefix tests:
+test112691 -> 4973a0aaa0d3ba1e
+test906173 -> 7579bd32a0d3ba1e
+test870369 -> e3701a81a0d3ba1e
+test141461 -> 142fb3aaa0d3ba1e
+test024043 -> b017d7f9a0d3ba1e
+
+Similar suffix tests:
+179470test -> 7e36f63b6e5712cb
+115222test -> d4d60c3fd8b8eccb
+497720test -> 68fb0102d78ee1de
+907160test -> de239555f1e56e43
+929602test -> 9ae2703bc93ad043
 
 Repeating pattern tests:
 azby0918 -> 52654f9893814399
@@ -188,3 +492,97 @@ test1234uest -> 989e51a6eb86dff8
 test1234tfst -> 989e51a6eb86dff8
 test1234tett -> 989e51a6eb86dff8
 test1234tesu -> 989e51a6eb86dff8
+
+Testing xxh3 32-bit two prime:
+
+Similar prefix tests:
+test844801 -> 4cfd683642d12ff2
+test511151 -> d697e16142d12ff2
+test708537 -> 3fe210ef42d12ff2
+test963158 -> b177317d42d12ff2
+test092433 -> 4b45f0fe42d12ff2
+
+Similar suffix tests:
+905544test -> 46ad5182269a1f25
+382264test -> da75760bdb5cbacf
+000817test -> 8b723bdcb93ebe16
+671481test -> 29cb0d9ed8b925a4
+853193test -> 395ee80a0aea46de
+
+Repeating pattern tests:
+azby0918 -> 9397f4181ae0261f
+azby0918az -> 39210ca613749cad
+azby0918azby -> deaa25340c09133b
+azby0918azby09 -> 84333dc2049d89c9
+azby0918azby0918 -> 4636ba30ba1856fa
+
+Single character difference tests:
+test1234test -> 8a9cf19b5913cc48
+uest1234test -> dd617de2555e078f
+tfst1234test -> 4f293897a34f1348
+tett1234test -> 16e3ede5945acc48
+tesu1234test -> d1993bd6a013cc48
+test2234test -> 86e72ce25913cc48
+test1334test -> d4d8389b5913cc48
+test1244test -> c5e3f19b5913cc48
+test1235test -> d19cf19b5913cc48
+test1234uest -> 8a9cf19b5913cc48
+test1234tfst -> 8a9cf19b5913cc48
+test1234tett -> 8a9cf19b5913cc48
+test1234tesu -> 8a9cf19b5913cc48
+
+Testing timed performance for hash_16:
+CPU time elapsed 20.218000ms
+Hash sum: 1fcbff1a397eea22
+
+Testing timed performance for hash_16_multi:
+CPU time elapsed 24.464000ms
+Hash sum: 9c0a2c95740f6a7
+
+Testing timed performance for hash_16_multi_improved:
+CPU time elapsed 76.813000ms
+Hash sum: 246f0a7abd50038e
+
+Testing timed performance for hash_mixed_primes:
+CPU time elapsed 21.422000ms
+Hash sum: 8bdd7b7f4f963470
+
+Testing timed performance for hash_24_and_small:
+CPU time elapsed 21.328000ms
+Hash sum: e8ccccfa60d9e658
+
+Testing timed performance for hash_20_alternating:
+CPU time elapsed 21.502000ms
+Hash sum: 80a9df00c2a3832e
+
+Testing timed performance for hash_16_and_8_alternating:
+CPU time elapsed 21.160000ms
+Hash sum: b32518ebdcefcf9e
+
+Testing timed performance for hash_16_and_8_improved:
+CPU time elapsed 99.690000ms
+Hash sum: b944e39a97b6ff25
+
+Testing timed performance for hash_16_and_8_improved_opt:
+CPU time elapsed 73.474000ms
+Hash sum: 23c2e47e13b712bd
+
+Testing timed performance for hash_16_and_8_improved_opt_combo:
+CPU time elapsed 96.172000ms
+Hash sum: c60eba18f197f764
+
+Testing timed performance for hash_16_opt_combo_mega:
+CPU time elapsed 79.626000ms
+Hash sum: 71bc6a726f213294
+
+Testing timed performance for hash_micro_prime:
+CPU time elapsed 21.158000ms
+Hash sum: 3371a44654ccfb70
+
+Testing timed performance for xxhash_32_one:
+CPU time elapsed 20.985000ms
+Hash sum: 7cb935ebc0eb59f3
+
+Testing timed performance for xxhash_32_two:
+CPU time elapsed 20.860000ms
+Hash sum: a5572257c27f0f20
