@@ -16,10 +16,10 @@ uint64_t hash_16(const uint8_t* data, size_t len) {
         hash ^= ptr[i];
         hash *= 65521;  // Largest 16-bit prime
     }
-    uint32_t bits_left = i*64-bits_max;
+    uint32_t bits_left = bits_max-i*64;
     if (bits_left>0) //bits left
     {
-        hash ^= (ptr[i+1]>>bits_left);
+        hash ^= (ptr[i+1]>>__builtin_clzll(bits_left));
     }
 
     return hash;
@@ -194,9 +194,9 @@ uint64_t hash_micro_prime(const uint8_t* data, size_t len) {
         hash *= 109;        // 8-bit prime (01101101)
         hash *= 233;        // 8-bit prime (11101001)
         hash *= 197;        // 8-bit prime (11000101)
+        hash *= 13;         // 4-bit prime ()
         hash *= 11;         // 4-bit prime ()
         hash *= 7;          // 4-bit prime ()
-        hash *= 3;          // 4-bit prime ()
     }
     return hash;
 }
